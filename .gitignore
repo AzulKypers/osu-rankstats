@@ -1,0 +1,9 @@
+build/
+dist/
+__pycache__/
+*.spec
+*.db
+*.db-journal
+config.json
+obs_card.png
+*.tmp

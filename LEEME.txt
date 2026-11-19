@@ -1,0 +1,31 @@
+osu!rankstats
+
+Archivos
+  osu_rankstats.pyw   codigo de la app
+  icon.png / icon.ico icono de la app
+  installer.iss       script del instalador (Inno Setup 6)
+  build.py            genera el .exe y el instalador
+  requirements.txt    librerias de Python necesarias
+  iniciar.bat         abre la app desde el codigo (sin compilar)
+
+Generar el instalador
+  1. Instalar Python 3 y las librerias:
+       python -m pip install -r requirements.txt
+  2. Instalar Inno Setup 6:
+       winget install JRSoftware.InnoSetup
+  3. Ejecutar:
+       python build.py
+
+  Resultado:
+       dist\osu-rankstats-setup-1.0.0.exe   (instalador)
+       build\dist\osu-rankstats.exe          (app sola, portable)
+
+Mostrar en el stream (OBS)
+  1. En la app: Configuracion -> activar "Modo OBS" -> Guardar.
+  2. En OBS: Fuentes -> + -> Navegador -> URL: http://127.0.0.1:52700/
+     Ancho 480, Alto 440.
+  El widget de escritorio se oculta en juegos a pantalla completa
+  (no baja los FPS) y OBS sigue mostrando las estadisticas.
+
+Datos de la app
+  %LOCALAPPDATA%\osu-rankstats\data.db
